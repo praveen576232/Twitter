@@ -10,11 +10,18 @@ import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined'
 import SidebarItem from './SidebarItem/SidebarItem';
 import ListAltOutlinedIcon from '@material-ui/icons/ListAltOutlined';
 import MoreHorizOutlinedIcon from '@material-ui/icons/MoreHorizOutlined';
-import { Button } from '@material-ui/core';
+import { Button, IconButton } from '@material-ui/core';
+import { auth } from './../firebase/firebase';
 function Sidebar() {
+    const signout =() => {
+        auth.signOut()
+    }
     return (
         <div className="sidebar">
+            <IconButton onClick={signout}>
+
            <TwitterIcon className="sidebar_twitter_icon"/>
+            </IconButton>
            <SidebarItem Icon={HomeOutlinedIcon} title="Home" active={true}/>
            <SidebarItem Icon={ExploreOutlinedIcon} title="Explore"/>
            <SidebarItem Icon={NotificationsNoneOutlinedIcon} title="Notifications"/>
