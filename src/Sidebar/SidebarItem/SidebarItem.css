@@ -1,0 +1,24 @@
+.sidebaritem{
+    display: flex;
+    cursor: pointer;
+    padding: 20px;
+}
+.sidebaritem >h4{
+    padding-left: 20px;
+}
+
+.sidebaritem:hover  {
+color: var(--twitter-color);
+border-radius: 30px;
+background-color: var(--twitter-backgroundcolor);
+transition: color 100ms ease-out;
+}
+
+.sidebaritem-active{
+    color: var(--twitter-color); 
+}
+@media screen and (max-width:1000px){
+    .sidebaritem >h4 {
+      display: none;
+    }  
+}
